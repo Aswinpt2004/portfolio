@@ -8,15 +8,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
     <style>
+        
         *{
             margin: 0;
             padding: 0;
         }
+
 body{ 
-    background-color: rgb(146, 146, 192);
+    background-color: rgb(11, 11, 65);
     color: white;
     font-family: "New Amsterdam", sans-serif;
 }        
+    
     nav{
         display: flex;
         justify-content: space-around;
@@ -24,23 +27,62 @@ body{
         height: 80px;
         background-color: rgb(87, 87, 168);
     }
+    
     nav ul{
         display: flex;
         justify-content: center;
     }
+    
     nav ul li{
         list-style: none;
         margin: 0 23px;
-    } 
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color: whitesmoke;
+        margin: 0 23px;
+    }
+    
+    nav ul li a:hover{
+        text-decoration: none;
+        color: rgb(26, 52, 81);
+        font-size: 1.4rem;
+        margin: 0 23px;
+    }
+
     .left{
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }  
+
+    .right{
+        font-size: 1.5rem;
     }  
     
     .firstsection{
         display: flex;
         justify-content: space-around;
-        margin: 23px 0;
+        align-items: center;
+        margin: 80px 0;
     }
+
+    .firstsection > div{
+        width: 30%;
+    }
+    
+    .leftsection{
+       font-size: 3rem;
+    }
+
+    .rightsection img{
+        width: 100% ;
+    }
+    
+    .purple{
+        color: blueviolet;
+    }
+
+
     </style>
 </head>
 <body>
@@ -49,29 +91,42 @@ body{
             <div class="left">Aswin's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>contect Me</li>
+                   <li> <a href="/">Home</li></a>
+                   <li> <a href="/">About</li></a>
+                   <li> <a href="/">Services</li></a>
+                   <li> <a href="/">Projects</li></a>
+                   <li> <a href="/">contect Me</li></a>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="first">
+        <section class="firstsection">
             <div class="leftsection">
-                left
+                Hi, My name is <span class = "purple">Aswin P T</span>
+                <div>I am a Software Developer</div>
+                <div>and a passionate </div>
+                <div>Ai/Ml engineer</div>
+                <span id="element"></span>
+
             </div>
             <div class="rightsection">
-                right
+                <img src="image.webp" alt="">
+               
             </div>
         </section>
     </main>
-
-    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+      typeSpeed: 50,
+    });
+  </script>
 </body>
+    </body>
 </html>
 
 
